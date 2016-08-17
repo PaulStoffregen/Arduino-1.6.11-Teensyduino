@@ -32,12 +32,16 @@ package cc.arduino.packages;
 import processing.app.AbstractMonitor;
 import processing.app.NetworkMonitor;
 import processing.app.SerialMonitor;
+import processing.app.TeensyMonitor;
 
 public class MonitorFactory {
 
   public AbstractMonitor newMonitor(BoardPort port) {
     if ("network".equals(port.getProtocol())) {
       return new NetworkMonitor(port);
+    }
+    if ("teensy".equals(port.getProtocol())) {
+      return new TeensyMonitor(port);
     }
 
     return new SerialMonitor(port);
