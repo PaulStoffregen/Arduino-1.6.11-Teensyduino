@@ -1,3 +1,10 @@
+Arduino 1.6.11 with Teensyduino's Modifications
+===============================================
+
+This copy of Arduino includes the Java code changes added by to the IDE
+by the Teensyduino installer.
+
+
 Arduino
 ========
 
